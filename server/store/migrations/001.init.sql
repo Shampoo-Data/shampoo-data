@@ -23,9 +23,9 @@ CREATE TABLE IF NOT EXISTS ingredients (
 );
 
 CREATE TABLE IF NOT EXISTS shampoos_to_ingredients (
-  shampo_id integer NOT NULL REFERENCES shampoos (id),
+  shampoo_id integer NOT NULL REFERENCES shampoos (id),
   ingredient_id integer NOT NULL REFERENCES ingredients (id),
-  UNIQUE (shampo_id, ingredient_id)
+  UNIQUE (shampoo_id, ingredient_id)
 );
 
 
@@ -55,7 +55,7 @@ VALUES
     ('Ingredient F');
   
 
-INSERT INTO shampoos_to_ingredients (shampo_id, ingredient_id)
+INSERT INTO shampoos_to_ingredients (shampoo_id, ingredient_id)
 VALUES
     (1, 1),
     (1, 2),

@@ -1,6 +1,8 @@
 import Head from 'next/head';
+import { Shampoo } from './Shampoo';
 
 export const HomePage = (props) => {
+  const { shampoos } = props;
   return (
     <div>
       <Head>
@@ -12,6 +14,14 @@ export const HomePage = (props) => {
         <h1>Shampoo Data</h1>
 
         <p>This sure is a home page</p>
+
+        <ul>
+          {shampoos.map((shampoo) => (
+            <li>
+              <Shampoo key={shampoo.id} {...shampoo} />
+            </li>
+          ))}
+        </ul>
       </main>
     </div>
   );
