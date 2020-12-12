@@ -14,9 +14,9 @@ export async function listShampoos() {
         shampoos
     join brands on
         brands.id = shampoos.brand_id
-    join shampoos_to_ingredients on
+    left outer join shampoos_to_ingredients on
         shampoos_to_ingredients.shampoo_id = shampoos.id
-    join ingredients on
+    left outer join ingredients on
         ingredients.id = shampoos_to_ingredients.ingredient_id;
       `);
 
@@ -46,7 +46,6 @@ export async function listShampoos() {
       id: ingredient_id,
       name: ingredient_name,
     });
-    console.log(acc);
 
     return acc;
   }, {});
