@@ -19,9 +19,23 @@ export const HomePage = (props) => {
 
           <ul className="shampoos">
             {shampoos.map((shampoo) => (
-              <li>
-                <Shampoo key={shampoo.id} {...shampoo} />
-              </li>
+              <>
+                <li>
+                  <Shampoo key={shampoo.id} {...shampoo} />
+                </li>
+                <li>
+                  <Shampoo key={shampoo.id} {...shampoo} />
+                </li>
+                <li>
+                  <Shampoo key={shampoo.id} {...shampoo} />
+                </li>
+                <li>
+                  <Shampoo key={shampoo.id} {...shampoo} />
+                </li>
+                <li>
+                  <Shampoo key={shampoo.id} {...shampoo} />
+                </li>
+              </>
             ))}
           </ul>
         </main>
