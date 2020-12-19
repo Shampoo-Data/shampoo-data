@@ -15,27 +15,13 @@ export const HomePage = (props) => {
           <h1>Shampoo Data</h1>
           <p>We have data about shampoo.</p>
 
-          <input className="search" type="text" value="search placeholder..." />
+          <input className="search" type="text" defaultValue="search placeholder..." />
 
           <ul className="shampoos">
             {shampoos.map((shampoo) => (
-              <>
-                <li>
-                  <Shampoo key={shampoo.id} {...shampoo} />
-                </li>
-                <li>
-                  <Shampoo key={shampoo.id} {...shampoo} />
-                </li>
-                <li>
-                  <Shampoo key={shampoo.id} {...shampoo} />
-                </li>
-                <li>
-                  <Shampoo key={shampoo.id} {...shampoo} />
-                </li>
-                <li>
-                  <Shampoo key={shampoo.id} {...shampoo} />
-                </li>
-              </>
+              <li key={shampoo.id}>
+                <Shampoo key={shampoo.id} {...shampoo} />
+              </li>
             ))}
           </ul>
         </main>
